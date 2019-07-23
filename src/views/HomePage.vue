@@ -76,7 +76,7 @@ export default {
         window.addEventListener('wheel', this.pageScroll)
         var cur_time = new Date();
         var uid = store.state.user.displayName;
-
+        // 디비에 추가
         store.state.vueName.page = 'HomePage';
         store.state.vueName.time = cur_time;
         store.state.vueName.userid = uid;
