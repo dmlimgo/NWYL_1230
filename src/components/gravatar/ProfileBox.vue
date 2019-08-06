@@ -12,7 +12,7 @@
         <!-- 로그인 상황에 따라 다른 화면 표시 -->
         <div class="card-content-wrapper" v-if="$store.state.user">
             <div style="display: flex;">
-                <img :src="gravatarURL" class="gravatar-img"/>
+                <img :src="gravatarURL" class="gravatar-img" alt="gravatar_image"/>
             </div>
             <div style="display: flex; width: 100%;">
                 <LoginModal/>

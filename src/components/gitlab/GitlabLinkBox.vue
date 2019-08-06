@@ -6,7 +6,7 @@
         <div class="card-bar" />
         <div class="card-content-wrapper">
             <router-link to="/GitlabGraph2" class="button" style="color:black !important">
-                <img src="https://about.gitlab.com/images/press/logo/png/gitlab-logo-gray-rgb.png" style="width: 100%;">
+                <img src="https://about.gitlab.com/images/press/logo/png/gitlab-logo-gray-rgb.png" style="width: 100%;" alt="gitlab_logo">
             </router-link>
         </div>
     </div>

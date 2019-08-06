@@ -5,7 +5,7 @@
         </div>
         <div class="card-bar"/>
         <div class="card-content-wrapper">
-            <img :src="weathericon" style="height:100px; width:100px;"/>
+            <img :src="weathericon" style="height:100px; width:100px;" alt="weather_icon"/>
             {{ weatherdata.weather }}
         </div>
     </div>

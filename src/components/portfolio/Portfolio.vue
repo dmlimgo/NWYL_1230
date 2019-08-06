@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-img :src="imgSrc" height="200px">
+    <v-img :src="imgSrc" height="200px" alt="portfolio_image">
     </v-img>
     <v-card-title primary-title>
       <div>

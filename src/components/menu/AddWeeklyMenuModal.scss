@@ -1,0 +1,53 @@
+#add-weekly-modal:target {
+    display: block;
+}
+#add-weekly-modal {
+    .modal-info {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .filecontainer::before {
+        content: "파일 업로드";
+    }
+}
+.modal-content2-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px 0;
+    text-align: center;
+}
+#uploaded-menu {
+    table {
+        border-collapse: separate;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 12px;
+    }
+    thead {
+        // tr:first-of-type {
+        //     color: #5a90bf;
+        // }
+        td {
+            font-size: 14px;
+            font-weight: 500;
+            &:not(:first-of-type) {
+                width: 120px;
+            }
+        }
+    }
+    tbody {
+        td {
+            padding: 5px 0;
+            &:first-of-type {
+                font-size: 14px;
+                font-weight: 500;
+                padding: 5px;
+            }
+            &:not(:first-of-type) {
+                border: 1px solid rgba(0,0,0,0.2);
+                border-radius: 10px;
+            }
+        }
+    }
+}

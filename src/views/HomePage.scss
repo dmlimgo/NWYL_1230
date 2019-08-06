@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Black+Ops+One|Bungee+Hairline|Bungee+Inline|Bungee+Shade|Codystar|Ewert|Faster+One|Hanalei|Kanit|Monofett|Righteous|Russo+One|Viga&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Baumans|Bungee+Inline|Graduate|Iceland|Julius+Sans+One|Mina|Play|Poiret+One|Raleway|Righteous|Russo+One|Shadows+Into+Light|Unica+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Cabin+Sketch|Gugi|Jua|Sniglet&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap');
+// 한글 제목용
+@import url('https://fonts.googleapis.com/css?family=Gamja+Flower|Jua|Poor+Story&display=swap');
+
+// blue: #5a90bf
+// green: #c8e19d
 
 html {
     scroll-behavior: smooth;
@@ -12,6 +17,9 @@ html {
 }
 .application--wrap {
     backface-visibility: visible;
+}
+.application {
+    font-family: 'Noto Sans KR', sans-serif;
 }
 .main-bg {
     position: fixed;
@@ -37,22 +45,23 @@ html {
 .body-wrapper {
     height: 100%;
     width: 100%;
-    padding: 40px 40px 40px 40px;
+    padding: 0 120px;
+}
+.body-flex {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+    min-height: 100vh;
 }
 .section-1, .section-2, .section-3 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-.section-1 {
-    height: calc(100vh - 40px);
-}
-.section-2 {
     height: 100vh;
 }
-.section-3 {
-    height: calc(100vh - 40px);
+.col1, .col2 {
+    display: flex;
 }
 .section-1-title {
     display: flex;
@@ -62,10 +71,22 @@ html {
     // font-family: 'Monofett', cursive;
     font-family: 'Sniglet', cursive;
 }
+.section-1-content {
+    display: flex;
+    flex-direction: column;
+    height: 55vh;
+    width: 100%;
+}
+.section-1-content-menu {
+    display: flex;
+}
+.section-1-content-image {
+    display: flex;
+}
 .section-1-scroll {
     display: flex;
-    align-items: center;
-    height: 160px;
+    align-items: flex-end;
+    height: 100px;
 }
 .scroll-round {
     display: flex;
@@ -112,10 +133,29 @@ html {
     display: flex;
     width: 100%;
 }
+.aboutus-image-box {
+    display: flex;
+    overflow: hidden;
+    width: 200px;
+    // height: 300px;
+    border: 2px solid black;
+    border-radius: 200px;
+    background: white;
+}
+.aboutus-image {
+    width: 200px;
+}
 a {
-    color: white !important;
+    color: rgba(0,0,0,1) !important;
+    text-align: center;
     &:hover {
         text-decoration: none;
-        color: #ffffffbe !important;
+        color: black !important;
     }
+}
+ul {
+    padding: 0;
+}
+li {
+    list-style: none;
 }

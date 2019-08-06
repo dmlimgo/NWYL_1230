@@ -1,0 +1,50 @@
+.menu-box {
+    display: flex;
+    flex-direction: column;
+    height: 330px;
+    width: 220px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    background: #f7f7f7;
+}
+.menu-title {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.menu-image {
+    display: flex;
+    justify-content: center;
+}
+.menu-tags {
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    .tag {
+        float: left;
+        background: #c8e19d; // 바꿔줘야 함
+        border-radius: 5px;
+        line-height: 10px;
+        padding: 4px 8px;
+        margin: 0 5px 5px 0;
+        font-size: 10px;
+    }
+}
+.menu-favorite {
+    display: flex;
+    height: 40px;
+    padding: 5px;
+    align-items: center;
+}
+.favorite-icon {
+    height: 20px;
+    width: 20px;
+    margin-right: 2px;
+    &:last-of-type {
+        margin: 0;
+    }
+}

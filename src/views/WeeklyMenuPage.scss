@@ -1,0 +1,21 @@
+.WeeklyMenu-title {
+    font-size: 32px;
+    font-family: 'Jua', sans-serif;
+    color: white;
+    -webkit-text-stroke: 1.5px black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+table {
+    border-collapse: collapse;
+}
+#calendar {
+    width: 100%;
+    background: white;
+    th {
+        // border-top: 2px solid black;
+        
+        // border-radius: 10px;
+    }
+    
+}

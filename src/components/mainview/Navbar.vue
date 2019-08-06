@@ -4,7 +4,7 @@
             <div class="left">
                 <div class="logo">
                     <router-link to="/" style="-webkit-text-stroke: 1px black;">
-                        <span style="color: #5a90bf;">NW</span><span style="color: #c8e19d;">YL</span>
+                        <span style="color: #5a90bf;">12</span><span style="color: #c8e19d;">15</span>
                     </router-link>
                 </div>
             </div>
