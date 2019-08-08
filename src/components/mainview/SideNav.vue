@@ -24,7 +24,16 @@
                         <img src="@/assets/images/calendar.png" style="width:100%;" alt="calendar">
                     </div>
                 </router-link>
+                <button disabled id="subscribe" class="nav-icon weeklymenu">
+                    구독하기
+                </button>
             </div>
+        </div>
+        <div>
+            <section class="js-subscription-details is-invisible">
+                <p>This String can use notification push alert.</p>
+                <pre><code class="js-subscription-json"></code></pre>
+            </section>
         </div>
     </div>
 </template>
