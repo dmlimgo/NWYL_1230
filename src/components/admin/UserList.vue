@@ -42,8 +42,8 @@ export default {
                 {text: 'Email', value: 'email', sortable:false},
                 {text: 'CreateDate', value: 'tokensValidAfterTime', sortable:false},
                 {text: 'Claim', value: 'customClaims', sortable: false},
-                {text: 'Authorize', sortable:false},
-                {text: 'Kick out' , sortable:false}
+                {text: 'Authorization', sortable:false},
+                {text: 'Withdrawal' , sortable:false}
             ],
             pagination: {
                 rowsPerPage: 10
