@@ -108,7 +108,7 @@ export default {
                 else{
                     store.state.commentUserTF = false
                 }
-                
+         
                 // console.log("score 합 : ",store.state.commentScore)
                 // console.log('commentL : ',commentL)
                 // console.log('유저 리스트?')

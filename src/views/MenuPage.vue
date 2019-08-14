@@ -52,7 +52,7 @@ export default {
         MenuList,
     },
     mounted() {
-
+        
 	},
     methods: {
         foodSelect(a){

@@ -10,8 +10,8 @@
                 <div class="modal-info">
                     <!-- <input @change="test" id="file" ref="myfile" name="weekly-menu" type="file" class="filecontainer"/> -->
                     <input @change="getMenuData" id="menudata" type="file" class="filecontainer"/>
-                    <!-- <button id="formButton" @click="sendData" class="form-button" disabled="" type="button">제출</button> -->
-                    <button @click="sendData" class="form-button" type="button">제출</button>
+                    <input type="file" id="csvfileinput" accept=".csv"/>
+                    <button id="formButton" @click="postPortfolio(title,body,imgSrc)" class="form-button" disabled="" type="button">제출</button>
                 </div>
                 <!-- postWeekMenus(menudata.menus[i]["date"], menudata.menus[i]["korean"], menudata.menus[i]["star"], menudata.menus[i]["special"])
                 postWeekMenus(menudata.menus[0]['date'], menudata.menus[0]['korean'], menudata.menus[0]['star'], menudata.menus[0]['special']
@@ -54,7 +54,33 @@ import { firestore } from '@/services/FirebaseService'
 
 const db = firebase.firestore();
 // const testdata = require('./5thJul2019.json')
+function csvJSON(csv){
+                var lines=csv.split('\n');
+                console.log(lines.length)
+                var result = [];
+                var headers=lines[0].split(",");
+                console.log(headers)
+                for(var i in lines){
+                    console.log('azzzzz')
+                    var obj = {};
+                    var currentline=lines[i].split(",");
+                    for(var j in headers){
+                        console.log('asdsadasd')
+                        obj[headers[j]] = currentline[j];
+                    }
+                    console.log(obj)
+                    result.push(obj);
+                }
+                console.log(result)
+                console.log(JSON.stringify(result))
+                return JSON.stringify(result);
+            }
 
+function  fileExtention(filename) {
+                var parts = filename.split('.');
+                console.log(parts)
+                return parts[parts.length - 1];
+            }
 export default {
     name: "AddWeeklyMenuModal",
     props: {
@@ -75,7 +101,25 @@ export default {
         this.menudata.special = this.special
     },
     mounted() {
-
+        
+      $("#csvfileinput").change(function () {
+        console.log('아아아이이이잉ㅇ 앗살라마라이쿰')
+            var file = this.files[0];
+            if (file && fileExtention($(this).val()) == 'csv') {
+            var reader = new FileReader();
+            reader.readAsText(file);
+            reader.onload = function (evt) {
+            // code to convert file data and render in json format
+            document.getElementById("fileContents").innerHTML = csvJSON(evt.target.result);
+            } 
+            reader.onerror = function (evt) { 
+            document.getElementById("fileContents").innerHTML = "error reading file"; 
+            } 
+            } 
+            else{ 
+            document.getElementById("fileContents").innerHTML = "Not a csv file"; 
+            } 
+        });  
     },
     methods: {
         getMenuData() {

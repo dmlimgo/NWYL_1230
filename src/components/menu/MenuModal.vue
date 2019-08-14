@@ -69,7 +69,8 @@
             <div class="modal-comment" id="commentSection" :key="$store.state.menucomments.length">
                 <!-- 댓글창 -->
                 <!-- 이곳에 댓글창 구현해 주세요 -->
-                <myli :id="i" v-for="i in $store.state.menucomments.length" style="margin-top:20px; display: block">{{ $store.state.menucomments[i-1] }}
+                <myli :id="i" v-for="i in $store.state.menucomments.length" style="margin-top:20px; display: block">{{ $store.state.menucomments[i-1] }}  
+                    <span style="position: absolute; right: 200px;">나의 평점: {{ $store.state.menucommentsScore[i-1] }}</span>
                     <button v-if="$store.state.user.uid===$store.state.commentUserId[i-1]" id="commentEdit" class="form-button" @click="editComment(i)" style="position: absolute; right: 90px;">수정</button>
                     <!-- <a v-if="$store.state.user.uid===$store.state.commentUserId[i-1]" id="modal-button" class="button" href="#menu-modal" @click="">수정</a> -->
                     <button v-if="$store.state.user.uid===$store.state.commentUserId[i-1]" class="form-button" @click="deletecomment(i);" style="position: absolute; right: 0;">삭제</button>

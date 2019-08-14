@@ -83,7 +83,7 @@ export default {
 		})
 	},
 	getMenus() {
-		console.log('모두다')
+		// console.log('모두다')
 		const menusCollection = firestore.collection('menus')
 		return menusCollection
 				.orderBy('name', 'desc')

@@ -103,7 +103,8 @@ export default {
             const collection = db.collection('menus').doc(store.state.menuid).collection("comments").orderBy("created_at", "desc");
             // console.log('commentfucntion:',collection)
             collection.onSnapshot(snapshot => {
-                store.state.menucomments = []
+                store.state.menucomments = [],
+                store.state.menucommentsScore = []
                 store.state.commentId = []
                 store.state.commentUserId = []
                 store.state.commentScore = 0
@@ -113,6 +114,7 @@ export default {
                 commentL += 1
                 store.state.menucomments.push(doc.data().comment)
                 store.state.commentId.push(doc.data().id)
+                store.state.menucommentsScore.push(doc.data().score)
                 store.state.commentUserId.push(doc.data().userInfo)
                 store.state.commentScore += Number(doc.data().score)
                 });
@@ -122,7 +124,13 @@ export default {
                 else{
                     store.state.commentUserTF = false
                 }
-                
+
+                if(store.state.menucomments.length>0){
+                    // console.log('asdasdsad')
+                    var dkdk = store.state.menucomments.length*40 + 750
+                    // console.log(dkdk)
+                    document.querySelector('.modal-box').style.height = `${dkdk}` + "px"
+                }
                 // console.log("score 합 : ",store.state.commentScore)
                 // console.log('commentL : ',commentL)
                 // console.log('유저 리스트?')

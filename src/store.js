@@ -14,6 +14,7 @@ export default new Vuex.Store({
         menuimg: '',
         menutag: [],
         menucomments: [],
+        menucommentsScore: [],
         commentId: [],
         commentUserId: [],
         commentScore: 0,

@@ -72,7 +72,7 @@ export default {
 		},
 		loadMorePortfolios() {
 			this.limits += 2
-    }
+    	}
 	},
 }
 </script>
