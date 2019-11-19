@@ -83,7 +83,7 @@ components와 view로 나누어 폴더 구조가 복잡해지지 않도록 하�
 
 오늘의 메뉴가 표시됩니다. SVG와 CSS의 애니메이션 속성을 이용하여 구름이 움직이는 듯한 효과를 주었습니다.
 
-![nwyl2](images\nwyl2.PNG)
+![nwyl2](images/nwyl2.PNG)
 
 ```html
 <div class="section-1-content-menu">
@@ -149,7 +149,7 @@ components와 view로 나누어 폴더 구조가 복잡해지지 않도록 하�
 
 #### 구글 로그인(백엔드)
 
-![nwyl3](images\nwyl3.PNG)
+![nwyl3](images/nwyl3.PNG)
 
 
 
@@ -187,9 +187,9 @@ methods: {
 
 음식 사진 마지막의 +를 눌러 메뉴를 추가할 수 있습니다.
 
-![nwyl4](images\nwyl4.PNG)
+![nwyl4](images/nwyl4.PNG)
 
-![nwyl5](images\nwyl5.PNG)
+![nwyl5](images/nwyl5.PNG)
 
 
 
@@ -197,7 +197,7 @@ methods: {
 
 json형태의 식단표 파일이 있다면 다음과 같이 나타냅니다.
 
-![nwyl6](images\nwyl6.PNG)
+![nwyl6](images/nwyl6.PNG)
 
 
 
@@ -205,7 +205,7 @@ json형태의 식단표 파일이 있다면 다음과 같이 나타냅니다.
 
 회원 정보와 메뉴 정보를 볼 수 있습니다.
 
-![nwyl8](images\nwyl8.PNG)![nwyl7](images\nwyl7.PNG)
+![nwyl8](images/nwyl8.PNG)![nwyl7](images/nwyl7.PNG)
 
 ```html
 <template>
